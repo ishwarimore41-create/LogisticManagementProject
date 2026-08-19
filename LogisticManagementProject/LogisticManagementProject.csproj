@@ -1,0 +1,622 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{656F9D7C-C3E1-4D10-8887-15A74AD22A05}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LogisticManagementProject</RootNamespace>
+    <AssemblyName>LogisticManagementProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OleDb, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.OleDb.7.0.0\lib\net462\System.Data.OleDb.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\Documents\logistic project.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\..\..\Documents\logistic project.Designer.cs">
+      <DependentUpon>logistic project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="carrierDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>carrierDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="carrierDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>carrierDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Carrior.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Carrior.Designer.cs">
+      <DependentUpon>Carrior.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employeeDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>employeeDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="employeeDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>employeeDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventory2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventory2.Designer.cs">
+      <DependentUpon>Inventory2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoice.Designer.cs">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet14.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet15.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet15.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet16.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet16.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet17.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet17.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet18.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet18.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet19.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet19.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet20.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet20.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Logistic_ManagementDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Logistic_ManagementDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Oil Filling.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oil Filling.Designer.cs">
+      <DependentUpon>Oil Filling.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation.cs" />
+    <Compile Include="Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sales Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales Report.Designer.cs">
+      <DependentUpon>Sales Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shipment.Designer.cs">
+      <DependentUpon>Shipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Supplier.Designer.cs">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Trip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trip.Designer.cs">
+      <DependentUpon>Trip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle Tracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicle Tracking.Designer.cs">
+      <DependentUpon>Vehicle Tracking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Warehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Warehouse.Designer.cs">
+      <DependentUpon>Warehouse.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="..\..\..\..\Documents\logistic project.resx">
+      <DependentUpon>logistic project.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Carrior.resx">
+      <DependentUpon>Carrior.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventory2.resx">
+      <DependentUpon>Inventory2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoice.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oil Filling.resx">
+      <DependentUpon>Oil Filling.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order.resx">
+      <DependentUpon>Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Sales Report.resx">
+      <DependentUpon>Sales Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shipment.resx">
+      <DependentUpon>Shipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Supplier.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trip.resx">
+      <DependentUpon>Trip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicle Tracking.resx">
+      <DependentUpon>Vehicle Tracking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Warehouse.resx">
+      <DependentUpon>Warehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="carrierDataSet1.xsc">
+      <DependentUpon>carrierDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="carrierDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>carrierDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="carrierDataSet1.xss">
+      <DependentUpon>carrierDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="carrierDataSet11.xsc">
+      <DependentUpon>carrierDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="carrierDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>carrierDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="carrierDataSet11.xss">
+      <DependentUpon>carrierDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="employeeDataSet11.xsc">
+      <DependentUpon>employeeDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="employeeDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>employeeDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="employeeDataSet11.xss">
+      <DependentUpon>employeeDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="employeeDataSet5.xsc">
+      <DependentUpon>employeeDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="employeeDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>employeeDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="employeeDataSet5.xss">
+      <DependentUpon>employeeDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet.xsc">
+      <DependentUpon>Logistic_ManagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet.xss">
+      <DependentUpon>Logistic_ManagementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet1.xsc">
+      <DependentUpon>Logistic_ManagementDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet1.xss">
+      <DependentUpon>Logistic_ManagementDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet10.xsc">
+      <DependentUpon>Logistic_ManagementDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet10.xss">
+      <DependentUpon>Logistic_ManagementDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet11.xsc">
+      <DependentUpon>Logistic_ManagementDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet11.xss">
+      <DependentUpon>Logistic_ManagementDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet12.xsc">
+      <DependentUpon>Logistic_ManagementDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet12.xss">
+      <DependentUpon>Logistic_ManagementDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet13.xsc">
+      <DependentUpon>Logistic_ManagementDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet13.xss">
+      <DependentUpon>Logistic_ManagementDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet14.xsc">
+      <DependentUpon>Logistic_ManagementDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet14.xss">
+      <DependentUpon>Logistic_ManagementDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet15.xsc">
+      <DependentUpon>Logistic_ManagementDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet15.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet15.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet15.xss">
+      <DependentUpon>Logistic_ManagementDataSet15.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet16.xsc">
+      <DependentUpon>Logistic_ManagementDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet16.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet16.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet16.xss">
+      <DependentUpon>Logistic_ManagementDataSet16.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet17.xsc">
+      <DependentUpon>Logistic_ManagementDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet17.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet17.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet17.xss">
+      <DependentUpon>Logistic_ManagementDataSet17.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet18.xsc">
+      <DependentUpon>Logistic_ManagementDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet18.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet18.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet18.xss">
+      <DependentUpon>Logistic_ManagementDataSet18.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet19.xsc">
+      <DependentUpon>Logistic_ManagementDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet19.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet19.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet19.xss">
+      <DependentUpon>Logistic_ManagementDataSet19.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet2.xsc">
+      <DependentUpon>Logistic_ManagementDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet2.xss">
+      <DependentUpon>Logistic_ManagementDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet20.xsc">
+      <DependentUpon>Logistic_ManagementDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet20.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet20.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet20.xss">
+      <DependentUpon>Logistic_ManagementDataSet20.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet3.xsc">
+      <DependentUpon>Logistic_ManagementDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet3.xss">
+      <DependentUpon>Logistic_ManagementDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet4.xsc">
+      <DependentUpon>Logistic_ManagementDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet4.xss">
+      <DependentUpon>Logistic_ManagementDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet5.xsc">
+      <DependentUpon>Logistic_ManagementDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet5.xss">
+      <DependentUpon>Logistic_ManagementDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet6.xsc">
+      <DependentUpon>Logistic_ManagementDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet6.xss">
+      <DependentUpon>Logistic_ManagementDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet7.xsc">
+      <DependentUpon>Logistic_ManagementDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet7.xss">
+      <DependentUpon>Logistic_ManagementDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet8.xsc">
+      <DependentUpon>Logistic_ManagementDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet8.xss">
+      <DependentUpon>Logistic_ManagementDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet9.xsc">
+      <DependentUpon>Logistic_ManagementDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="Logistic_ManagementDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Logistic_ManagementDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Logistic_ManagementDataSet9.xss">
+      <DependentUpon>Logistic_ManagementDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="employee.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Logistic Management.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
